@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackground"
+    android:layout_height="match_parent"
+    tools:context=".ThirdScreen">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginTop="50dp"
+    android:background="@drawable/task_background"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:text="Varsha"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:text="password"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:text="Email"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvBirthDate"
+        android:layout_width="wrap_content"
+        android:text="User BirthDate"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:text="Age"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvLocation"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:text="User Location"-->
+<!--        android:padding="12dp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+    <TextView
+        android:id="@+id/tvAddressLatitude"
+        android:layout_width="wrap_content"
+        android:text="Address Latitude"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/AddressLongitude"
+        android:layout_width="wrap_content"
+        android:text="AddressLongitude"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+
+</LinearLayout>

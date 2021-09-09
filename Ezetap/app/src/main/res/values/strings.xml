@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Ezetap Assignment</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
