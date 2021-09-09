@@ -1,14 +1,11 @@
-# EzetapAssignment  📱
+# EzetapAssignment 📱
 
 # Problem statement
-You have to create 3 screens
-
 Screen 1 - will have some boxes to enter username, password, email, birth date
 
 Screen 2 - will be having one text box to choose user address from map
 
 Screen 3 - need to display the info whatever they entered in screen1 & screen2
-
 
 # Technology Stack Used 📲
 
@@ -16,7 +13,7 @@ In this project I have used the following tech stack.
 
 - Kotlin: [Kotlin](https://kotlinlang.org/)
 - Android: [Android](https://developer.android.com/docs)
-- Java: [Java](https://www.java.com/en/)
+- Java: [Java](https://docs.oracle.com/en/java/)
 
 <br>
 
@@ -26,6 +23,11 @@ In this project I have used the following tech stack.
 2. Icons: [Icons](https://www.flaticon.com/)
 3. Fonts: [Roboto](https://fonts.google.com/specimen/Roboto)
 
+
+
+
+
+https://user-images.githubusercontent.com/75352515/132637498-ba8a58d8-ed3c-4d86-8ede-8f80d90ebcc0.mp4
 
 
 
