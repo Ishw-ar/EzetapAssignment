@@ -10,7 +10,7 @@ class ThirdScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third_screen)
         SharedPref.init(this)
-
+         // Store Data using Shared Preference
         tvName.text = SharedPref.read(SharedPref.NAME, "")
         tvEmail.text = SharedPref.read(SharedPref.EMAIL, "")
         tvPassword.text = SharedPref.read(SharedPref.PASSWORD, "")

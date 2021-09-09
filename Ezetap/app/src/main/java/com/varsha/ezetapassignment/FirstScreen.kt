@@ -2,18 +2,17 @@ package com.varsha.ezetapassignment
 
 import android.app.DatePickerDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
+import android.text.TextUtils
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
+import android.util.Patterns
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import java.text.SimpleDateFormat
-import java.time.Year
 import java.util.*
+
 
 class FirstScreen : AppCompatActivity() {
     private  var mIsShowPass=false
@@ -26,7 +25,7 @@ class FirstScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //SharedPreference
+
         SharedPref.init(this)
 
         val calendar=Calendar.getInstance()
@@ -34,7 +33,7 @@ class FirstScreen : AppCompatActivity() {
         val myMonth=calendar.get(Calendar.MONTH)
         val day=calendar.get(Calendar.DAY_OF_MONTH)
 
-        //val sdf=SimpleDateFormat("dd/MM/yyyy")
+
         val c=Calendar.getInstance()
         val Year=c.get(Calendar.YEAR)
 
@@ -42,6 +41,7 @@ class FirstScreen : AppCompatActivity() {
             val datePickerDialog=DatePickerDialog(this,DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
              val selectedDate="$dayOfMonth/$month/$year"
                 etBirthDate.setText(selectedDate)
+                //calculate Age
                 age=Year-year
 
 
@@ -50,7 +50,7 @@ class FirstScreen : AppCompatActivity() {
         }
 
 
-
+    // Validation all Field
      btnProceed.setOnClickListener {
          val username =etTitle.text.toString().trim()
          val userpassword =etPassword.text.toString().trim()
@@ -78,26 +78,7 @@ class FirstScreen : AppCompatActivity() {
      }
 
 
-//        etEmail.addTextChangedListener(object :TextWatcher{
-//            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-//
-//
-//            }
-//
-//            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                if (android.util.Patterns.EMAIL_ADDRESS.matcher(etEmail.text.toString()).matches())
-//                    btnProceed.isEnabled=true
-//                else {
-//                    btnProceed.isEnabled=false
-//                    etEmail.setError("Invalid Email")
-//                }
-//            }
-//
-//            override fun afterTextChanged(s: Editable?) {
-//
-//            }
-//
-//        }
+
 
 
             //password toggle
@@ -106,6 +87,9 @@ class FirstScreen : AppCompatActivity() {
             showPassword(mIsShowPass)
         }
         showPassword(mIsShowPass)
+
+
+
     }
     private fun showPassword(isShow:Boolean){
         if (isShow){
@@ -117,14 +101,13 @@ class FirstScreen : AppCompatActivity() {
         }
         etPassword.setSelection(etPassword.text.toString().length)
     }
+
+    //get Data from Shared Preference
     private fun saveData() {
         SharedPref.write(SharedPref.NAME, etTitle.text.toString())
         SharedPref.write(SharedPref.EMAIL, etEmail.text.toString())
         SharedPref.write(SharedPref.PASSWORD, etPassword.text.toString())
         SharedPref.write(SharedPref.DOB, etBirthDate.text.toString())
         SharedPref.write(SharedPref.AGE, age.toString())
-
     }
-
-
 }
