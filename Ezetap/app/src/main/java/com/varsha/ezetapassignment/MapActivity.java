@@ -15,7 +15,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class HomeActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
     private String apiKey = "AIzaSyCzTy2-BLNyY89cVO-lPdInQJ7LVTigBAk";
     private TextView placeSearch_Tv;
     double latitude = 0.0;
@@ -26,24 +26,27 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
     private ImageView  buttonproceed;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_map);
 
         SharedPref.init(this);
 
         placeSearch_Tv = findViewById(R.id.placeSearch_tv);
         buttonproceed=findViewById(R.id.button_proceed);
+
         sb.append(latitude);
 
         buttonproceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this,ThirdScreen.class);
+                Intent intent=new Intent(MapActivity.this,ThirdScreen.class);
                 startActivity(intent);
             }
         });
+
         placeSearch_Tv.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -84,6 +87,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
                 nMap.addMarker(markerOptions);
             }
         });
+
     }
 
 }

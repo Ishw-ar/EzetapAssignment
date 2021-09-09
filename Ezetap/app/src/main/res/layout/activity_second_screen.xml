@@ -3,13 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorBackground"
     android:layout_height="match_parent"
     tools:context=".SecondScreen">
 
     <EditText
         android:id="@+id/address"
         android:layout_width="match_parent"
+        android:gravity="center"
         android:hint="Address"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/Color_Button"
+        android:textColorHint="@color/colorHint"
         android:layout_height="wrap_content"/>
+
 
 </LinearLayout>

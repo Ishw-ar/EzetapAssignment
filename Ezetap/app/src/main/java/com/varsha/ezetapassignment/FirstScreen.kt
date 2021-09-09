@@ -3,10 +3,8 @@ package com.varsha.ezetapassignment
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
-import android.util.Patterns
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -73,7 +71,7 @@ class FirstScreen : AppCompatActivity() {
              Toast.makeText(this,"Validation Completed",Toast.LENGTH_SHORT).show()
          }
          saveData()
-         val intent = Intent(this@FirstScreen, HomeActivity::class.java)
+         val intent = Intent(this@FirstScreen, SecondScreen::class.java)
          startActivity(intent)
      }
 

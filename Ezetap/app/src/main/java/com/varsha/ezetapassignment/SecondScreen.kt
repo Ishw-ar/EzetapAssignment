@@ -12,7 +12,7 @@ class SecondScreen : AppCompatActivity() {
         setContentView(R.layout.activity_second_screen)
 
         address.setOnClickListener {
-            val intent = Intent(this@SecondScreen, HomeActivity::class.java)
+            val intent = Intent(this@SecondScreen, MapActivity::class.java)
             startActivity(intent)
         }
 
